@@ -8,12 +8,26 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
 </head>
 <body>
-    <div id="main-div">
-        <h1>Todo List <i class="fa-solid fa-clipboard-list"></i></h1>
-        <div id="input-box">
-            <input type="text" placeholder="Enter Your Task">
-            <button>ADD</button>
+    <div id="main-container">
+        
+        <div class="status-container">
+            <div class="details">
+                <h1>ToDo App <i class="fa-solid fa-list-check"></i></h1>
+                <p>Keep it up!</p>
+                <div class="progress-bar">
+                    <div id="progress"></div>
+                </div>
+            </div>
+            <div class="status-num">
+                <p id="number">0 / 0</p>
+            </div>
         </div>
+        <form id="input-box" action="">
+            <input id="input_task" type="text" placeholder="Write Your Task" maxlength="50">
+            <button id="new_task" type="submit"><i class="fa-solid fa-plus"></i></button>
+        </form>
+        <ul id="task-list"></ul>
     </div>
+    <script src="./script.js"></script>
 </body>
 </html>
