@@ -1,6 +1,8 @@
 # 📝 To-Do App
 A simple, elegant and responsive **To-Do List Web Application**
 
+## Project Sc
+![Screenshot](https://github.com/falgune2701/CodeAlpha_Internship_tasks/blob/main/CodeAlpha_ToDoList/TodoList_App_Sc.png)
 
 ## 🚀 Features
 
