@@ -3,7 +3,7 @@ const storedTasks = JSON.parse(localStorage.getItem('tasks'))
 if(storedTasks){
    storedTasks.forEach((task) => tasks.push(task));
    updateTasksList();
-   updateStatus();
+   updateStats();
 }
 })
 const tasks = [];
@@ -25,7 +25,7 @@ const addTask = () => {
         tasks.push({task:text, completed:false});
         inputTask.value = "";
         updateTasksList();
-        updateStatus();
+        updateStats();
         saveTasks();
     }
 };
@@ -33,7 +33,7 @@ const addTask = () => {
 const toggleTaskComplete = (index) => {
     tasks[index].completed = !tasks[index].completed;
     updateTasksList();
-    updateStatus();
+    updateStats();
     saveTasks();
 
 };
@@ -44,7 +44,7 @@ const editInputTask = document.getElementById('input_task');
 editInputTask.value = tasks[index].task;
 tasks.splice(index, 1);
 updateTasksList();
-updateStatus();
+updateStats();
 saveTasks();
 };
 
@@ -52,12 +52,12 @@ saveTasks();
 const deleteTask = (index) => {
  tasks.splice(index,1);
  updateTasksList();
- updateStatus();
+ updateStats();
  saveTasks();
 };
 
 // update status
-const updateStatus = () => {
+const updateStats = () => {
     const completedTasks = tasks.filter((task) => task.completed).length;
     const totalTasks = tasks.length;
     document.getElementById('number').innerText = `${completedTasks} / ${totalTasks}`;
